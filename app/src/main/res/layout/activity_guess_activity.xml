@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--LinearLayout containing the entire layout -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".GuessMaster">
+
+        <!--View for the header background-->
+        <View
+            android:id="@+id/headerBackground"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginBottom="7dp"
+            android:background="#673AB7"
+            app:layout_constraintBottom_toTopOf="@+id/ticket"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--TextView for the title: 'GuessMaster'-->
+        <TextView
+            android:id="@+id/guessMasterTitle"
+            android:layout_width="84dp"
+            android:layout_height="21dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="-100dp"
+            android:layout_marginBottom="25dp"
+            android:fontFamily="@font/cookiesandcream"
+            android:text="GuessMaster"
+            android:textColor="@android:color/white"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/ticket"
+            app:layout_constraintEnd_toStartOf="@+id/headerBackground" />
+
+
+        <!--TextView for ticket to store user ticket later in the game-->
+        <TextView
+            android:id="@+id/ticket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="241dp"
+            android:layout_marginTop="61dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="27dp"
+            android:text="Total Tickets: 0"
+            app:layout_constraintBottom_toTopOf="@+id/entityImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <!--ImageView for entityImage to display the image of an entity later on-->
+        <ImageView
+            android:id="@+id/entityImage"
+            android:layout_width="219dp"
+            android:layout_height="367dp"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="121dp"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="31dp"
+            app:layout_constraintBottom_toTopOf="@+id/entityName"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@tools:sample/avatars"
+            android:adjustViewBounds="true" />
+
+        <!--TextView to display entity name of the current entity-->
+        <TextView
+            android:id="@+id/entityName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="177dp"
+            android:layout_marginEnd="178dp"
+            android:layout_marginBottom="196dp"
+            android:text="Entity name"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entityImage" />
+
+
+        <!--EditText for user input-->
+        <EditText
+            android:id="@+id/guessinput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="MM/DD/YYYY"
+            android:inputType="text"
+
+            app:layout_constraintBottom_toTopOf="@+id/my_table"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/entityName" />
+
+
+
+
+        <!-- TableLayout for organizing the two buttons-->
+        <TableLayout
+            android:id="@+id/my_table"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/guessinput"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="16dp">
+
+            <!--TableRow tags within the TableLayout tags-->
+            <TableRow>
+
+                <!--LinearLayout to contain the two buttons-->
+                <LinearLayout
+                    android:layout_width="401dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent">
+
+                    <!--Button for submitting guess-->
+                    <Button
+                        android:id="@+id/btnGuess"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:text="SUBMIT GUESS"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <!--Button for changing entity-->
+                    <Button
+                        android:id="@+id/btnClear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="12dp"
+                        android:text="CHANGE ENTITY"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                </LinearLayout>
+
+
+            </TableRow>
+
+        </TableLayout>
+
+
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+
+
+
+
+
+
+
+
+
