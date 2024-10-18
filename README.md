@@ -4,14 +4,6 @@
 GuessMaster is an Android-based guessing game where players guess the birthdates of famous entities such as celebrities, countries, and politicians. Originally a command-line game, this project introduces a graphical user interface (GUI) using Android Studio to enhance the player experience with intuitive interactions via an interface featuring TextViews, ImageViews, EditTexts, and Buttons.
 
 
-
-
-
-
-# GuessMaster - Android Game
-
-GuessMaster is an Android-based guessing game where players guess the birthdates of famous entities such as celebrities, countries, and politicians. Originally a command-line game, this project introduces a graphical user interface (GUI) using Android Studio to enhance the player experience with intuitive interactions via an interface featuring TextViews, ImageViews, EditTexts, and Buttons.
-
 ## Features
 
 - Guessing Game: Players guess the birthdates of entities such as celebrities, politicians, and countries.
