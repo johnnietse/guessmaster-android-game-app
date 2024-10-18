@@ -39,9 +39,22 @@ GuessMaster is an Android-based guessing game where players guess the birthdates
 
 - Winning Tickets: Players earn tickets for each correct guess, which are tracked and displayed.
 
+
 ## Project Setup
-1. Clone the repository and open the project in Android Studio.
+To set up and run the project:
 
-2. The project already includes necessary resources such as images (in the drawable folder) for the game entities.
+1. Download the GuessMaster.zip file:
 
-3. You can build and run the app on an emulator or physical Android device to start playing the game.
+- Navigate to the .zip-file folder above and download the GuessMaster.zip file.
+
+2. Unzip the File:
+
+- Extract the contents of the downloaded file.
+
+3. Open in Android Studio:
+
+- Open Android Studio and select the unzipped project folder. The project already includes necessary resources such as images (in the drawable folder) for the game entities.
+
+4. Build and Run:
+
+- Build the project and run it on an Android emulator or a physical Android device to start playing the game.
